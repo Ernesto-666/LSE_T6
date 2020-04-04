@@ -52,12 +52,55 @@ class LSE
 		Nodo *Buscar(int);
 		void Borrar(int);
 };
-
-
-
-
-
-
+void LSE::InsertarI(int a)
+{
+if(!Inicio)
+{
+    Inicio=new Nodo(a);
+}else
+{
+	Nodo *A1=new Nodod(a);
+	A1->Asignasig(Inicio);
+	Inicio=A1;
+}
+}
+void LSE::InsertarF(int a)
+{
+	if(Inicio==NULL)
+	{
+	Inicio=new Nodo(a);	
+	}else
+	{
+	Nodo *A2=Inicio;
+		while(A2->Obtienesig()!=NULL)
+		{
+			A2=A2->Obtienesig();
+			Nodo *A3=new Nodod(a);
+			A2->Asignasig(A3);
+		}
+	}
+}
+void LSE::BorrarI()
+{
+	if(!Inicio)
+	{
+	cout<<"La lista esta vacia"<<endl<<endl;
+	}else
+	{
+	 if(Inicio->Obtienesig()==NULL)
+	 {
+	  delete Inicio;
+	  Inicio=NULL;
+	 }else
+	 {
+	 Nodo *	 
+	 }
+	}
+}
+void LSE::BorrarF()
+{
+	
+}
 
 int main(int argc, const char * argv[])
 {
